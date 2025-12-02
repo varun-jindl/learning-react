@@ -1,68 +1,350 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  background-color: #f9f9f9;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+/* Handles word breaking for a few specific languages which handle breaks in words differently. If your content is not translated into these languages, you can safely remove this.  */
+
+html[lang^="ja"] body,
+html[lang^="zh"] body,
+html[lang^="ko"] body {
+  line-break: strict;
+  overflow-wrap: normal;
+  word-break: break-all;
+}
+
+.skip-content-btn a {
+  display: inline-block;
+  margin-left: 43px;
+  text-align: center;
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+  position: absolute;
+  top: 30px;
+  left: 90px;
+  z-index: 99999;
+}
+
+.skip-content-btn > a:focus {
+  transform: translateY(0%);
+  outline: none;
+}
+
+th {
+  text-align: left;
+}
+/* Paragraphs */
+
+p {
+  font-size: 1em;
+  margin: 0 0 16px;
+}
+
+/* Anchors */
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 16px;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+  background-color: #cfcfcf;
+  color: #1a1a1a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 42px;
+  font-weight: 700;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 28px;
+  font-weight: 600;
+}
+h5 {
+  font-size: 24px;
+  font-weight: 600;
+}
+h6 {
+  font-size: 20px;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+/* Buttons */
+
+button,
+.button,
+.btn__primary,
+.btn--primary a,
+.btn__secondary,
+.btn--secondary a {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.15s linear;
+  white-space: normal;
+  line-height: normal;
+  min-width: 154px;
+}
+
+button:disabled,
+.button:disabled,
+button:disabled:hover,
+.button:disabled:hover {
+  background-color: #d0d0d0;
+  border-color: #d0d0d0;
+  color: #000;
+}
+
+/* No button */
+
+.no-button,
+.no-button:hover,
+.no-button:focus,
+.no-button:active {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: initial;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin-bottom: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  transition: none;
+}
+
+form input[type="submit"] {
+  margin-top: 20px;
+}
+/* Fields */
+
+.hs-form-field {
+  margin-bottom: 16px;
+}
+
+/* Labels */
+
+form label {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+form label:empty {
+  display: none;
+}
+form label > sapn:empty {
+  display: none;
+}
+form select {
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  font-size: 16px;
+}
+/* Form Title */
+.form-title {
+  margin-bottom: 0;
+}
+
+/* Help text */
+
+form legend {
+  font-size: 0.875rem;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+
+form input[type="text"],
+form input[type="search"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 14px 16px;
+  width: 100%;
+  font-weight: 400;
+  outline: 0;
+  letter-spacing: 0.3px;
+  min-height: 54px;
+  transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="search"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="tel"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus,
+form select:focus,
+form textarea:focus {
+  background: #f9f9f9;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form fieldset {
+  max-width: 100% !important;
+}
+
+form select {
+  cursor: pointer;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  cursor: pointer;
+  margin-right: 0.35rem;
+}
+
+/* Inputs - file picker */
+
+form input[type="file"] {
+  background-color: transparent;
+  border: initial;
+  padding: initial;
+}
+
+/* Lists */
+
+ul,
+ol {
+  margin: 0 0 1.4rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+
+ul.no-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Code blocks */
+
+pre {
+  overflow: auto;
+}
+
+code {
+  vertical-align: bottom;
+}
+
+/* Blockquotes */
+
+blockquote {
+  border-left: 2px solid;
+  margin: 0 0 1.4rem;
+  padding-left: 0.7rem;
+}
+
+/* Horizontal rules */
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Image alt text */
+
+img {
+  font-size: 0.583rem;
+  vertical-align: middle;
+  word-break: normal;
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.topContent {
+  max-width: 767px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.topContent > *:last-child {
+  margin-bottom: 0;
+}
+.topContent .heading {
+  color: #fff;
+  margin-bottom: 8px;
+}
+.topContent .subHeading {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .topContent {
+    text-align: left;
   }
 }

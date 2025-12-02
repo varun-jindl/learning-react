@@ -1,9 +1,9 @@
-import React from 'react'
+import AllCard from './components/CourseCardsSection/AllCard'
 
 const App = () => {
   return (
     <>
-      <h1>Hello</h1>
+      <AllCard />
     </>
   )
 }

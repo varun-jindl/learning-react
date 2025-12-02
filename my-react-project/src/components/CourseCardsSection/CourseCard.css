@@ -1,0 +1,189 @@
+.courseCardSection {
+  padding: 120px 0;
+  background: linear-gradient(90deg, #9b5cf6 0%, #c06be7 50%, #f082c2 100%);
+}
+
+.courseCardSection .courseCards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px 20px;
+}
+.courseCardSection .courseCardHolder {
+  width: calc(33.33% - 13.33px);
+}
+
+.courseCardSection .courseCard {
+  background: #fbf7ff;
+  border: 6px solid #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(69, 0, 140, 0.12);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.courseCardImage {
+  width: 100%;
+  height: 190px;
+  padding: 14px;
+  box-sizing: border-box;
+}
+
+.courseCardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.courseCardContent {
+  padding: 12px 18px 18px;
+}
+
+.courseCardCategoryHolder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.courseCardCategory {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #efe6ff;
+  color: #3e3a4a;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.courseCardCategoryDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #8b5cf6;
+  display: inline-block;
+}
+
+.courseCardRating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #8b5cf6;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+.starIcon {
+  fill: #fcd34d;
+  stroke: #fcd34d;
+}
+
+.courseCardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #151127;
+  margin: 8px 0 14px;
+  line-height: 1.25;
+}
+
+.courseInfo {
+  display: flex;
+  gap: 20px;
+  color: #5f5a6f;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.courseInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.courseInfoItem svg {
+  color: #8b5cf6;
+}
+
+.courseCardDivider {
+  height: 1px;
+  width: 100%;
+  background: #e7def7;
+  margin: 8px 0 12px;
+}
+
+.courseCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.courseCardPrice {
+  font-size: 20px;
+  font-weight: 800;
+  color: #151127;
+}
+
+.courseCardInstructor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.instructorAvatar {
+  width: 34px;
+  height: 34px;
+  position: relative;
+}
+
+.instructorAvatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.onlineDot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #22c55e;
+  border: 2px solid #fff;
+}
+
+.instructorName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8b5cf6;
+}
+
+@media (max-width: 1023px) {
+  .courseCardSection {
+    padding: 80px 0;
+  }
+  .courseCardSection .courseCardHolder {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 767px) {
+  .courseCardSection {
+    padding: 60px 0;
+  }
+  .courseCardSection .courseCardHolder {
+    width: 100%;
+  }
+}
