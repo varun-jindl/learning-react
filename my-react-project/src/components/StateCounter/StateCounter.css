@@ -1,0 +1,82 @@
+.stateCounterSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  padding: 120px 0;
+}
+
+.stateCounterSection .counterStates {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  max-width: 420px;
+  width:100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  margin: 0 auto;
+}
+
+.stateCounterSection .stateCounterNumber {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.stateCounterSection .stateCounterLabel {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.stateCounterSection .buttonItems {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+      flex-wrap: wrap;
+}
+
+.stateCounterSection .buttonItems button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.stateCounterSection .increment {
+  background: #10b981;
+  color: white;
+}
+
+.stateCounterSection .increment:hover {
+  background: #0d9668;
+}
+
+.stateCounterSection .decrement {
+  background: #ef4444;
+  color: white;
+}
+
+.stateCounterSection .decrement:hover {
+  background: #c73030;
+}
+
+
+@media (max-width: 1023px) {
+  .stateCounterSection {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .stateCounterSection {
+    min-height: auto;
+    padding: 60px 0;
+  }
+}

@@ -13,8 +13,6 @@ body {
   font-family: "Red Hat Text", sans-serif;
 }
 
-/* Handles word breaking for a few specific languages which handle breaks in words differently. If your content is not translated into these languages, you can safely remove this.  */
-
 html[lang^="ja"] body,
 html[lang^="zh"] body,
 html[lang^="ko"] body {
